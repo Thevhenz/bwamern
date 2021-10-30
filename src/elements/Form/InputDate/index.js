@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import { DateRange } from "react-date-range";
 
 import "./index.scss";
-import "react-date-range/dist/style.css"; //main css file
+import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
 import formatDate from "utils/formatDate";
@@ -53,7 +53,7 @@ export default function Date(props) {
       className={["input-date mb-3", props.outerClassName].join(" ")}
     >
       <div className="input-group">
-        <div className="input-group-prepand bg-gray-900">
+        <div className="input-group-prepend bg-gray-900">
           <span className="input-group-text">
             <img src={iconCalendar} alt="icon calendar" />
           </span>

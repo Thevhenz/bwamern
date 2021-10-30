@@ -29,5 +29,3 @@ export default class LandingPage extends Component {
     );
   }
 }
-
-// https://www.tokopedia.com/dolphincell01/redmi-4x-ram-2gb-internal-16gb?whid=1640815

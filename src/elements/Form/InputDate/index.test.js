@@ -39,3 +39,26 @@ const setup = () => {
     input,
   };
 };
+
+test("Should have wrapper with className .form-control", () => {
+  const { wrapper } = setup();
+
+  expect(wrapper).toBeInTheDocument();
+});
+
+test("Should have tag <input> and has className .form-control", () => {
+  const { input } = setup();
+
+  expect(input).toBeInTheDocument();
+});
+
+test("Should show date picker when click input field", () => {
+  const { container, input } = setup();
+
+  //screen.debug();
+  fireEvent.click(input, { button: 1 });
+  const datePickerWrapper = container.querySelector(`.date-range-wrapper`);
+  //screen.debug();
+
+  expect(datePickerWrapper).toBeInTheDocument();
+});
