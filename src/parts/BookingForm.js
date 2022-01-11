@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
 import propTypes from "prop-types";
 
@@ -71,16 +71,16 @@ class BookingForm extends Component {
       duration: data.duration,
       date: {
         startDate: data.date.startDate,
-        endDate: data.date.endDate
-      }
-    })
-    this.props.history.push("/checkout")
-  }
+        endDate: data.date.endDate,
+      },
+    });
+    this.props.history.push("/checkout");
+  };
 
   render() {
     const { data } = this.state;
     const { itemDetails } = this.props;
-    
+
     return (
       <div className="card bordered" style={{ padding: "60px 80px" }}>
         <h4 className="mb-3">Start Booking</h4>
@@ -110,7 +110,7 @@ class BookingForm extends Component {
         >
           You will pay{" "}
           <span className="text-gray-900">
-            ${(itemDetails.price * data.duration)} USD
+            ${itemDetails.price * data.duration} USD
           </span>{" "}
           per{" "}
           <span className="text-gray-900">
@@ -137,4 +137,4 @@ BookingForm.propTypes = {
   startBooking: propTypes.func,
 };
 
-export default withRouter(BookingForm)
+export default withRouter(BookingForm);

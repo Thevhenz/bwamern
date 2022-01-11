@@ -12,7 +12,6 @@ import Footer from "parts/Footer";
 
 import ItemDetails from "json/itemDetails.json";
 
-
 export default class DetailsPage extends Component {
   componentDidMount() {
     window.title = "Details Page";
@@ -33,13 +32,13 @@ export default class DetailsPage extends Component {
           <div className="row">
             <div className="col-7 pr-5">
               <Fade bottom>
-              <PageDetailDescription data={ItemDetails} />
+                <PageDetailDescription data={ItemDetails} />
               </Fade>
             </div>
             <div className="col-5">
-            <Fade bottom>
-              <BookingForm itemDetails={ItemDetails} />
-            </Fade>
+              <Fade bottom>
+                <BookingForm itemDetails={ItemDetails} />
+              </Fade>
             </div>
           </div>
         </section>
