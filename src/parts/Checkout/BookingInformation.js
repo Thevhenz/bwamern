@@ -1,6 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
 
+import { InputText } from "elements/Form";
+
 export default function BookingInformation(props) {
   const { data, ItemDetails, checkout } = props;
   return (
@@ -30,7 +32,7 @@ export default function BookingInformation(props) {
                     <span>
                       ${+checkout.duration * ItemDetails.price} USD
                       <span className="text-gray-500"> per </span>
-                      {checkout.duration} {ItemDetails.unit}{" "}
+                      {checkout.duration} {ItemDetails.unit}
                       {+checkout.duration > 1 ? "s" : ""}
                     </span>
                   </div>
@@ -65,7 +67,7 @@ export default function BookingInformation(props) {
                 onChange={props.onChange}
               />
 
-              <label htmlFor="phone">First Name</label>
+              <label htmlFor="phone">Phone Number</label>
               <InputText
                 id="phone"
                 name="phone"
