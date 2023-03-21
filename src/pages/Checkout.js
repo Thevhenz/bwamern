@@ -62,14 +62,9 @@ class Checkout extends Component {
     payload.append("image", data.proofPayment[0]);
     // payload.append("bankId", checkout.bankId);
 
-    this.props
-      .submitBooking(payload)
-      .then(() => {
-        nextStep();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.props.submitBooking(payload).then(() => {
+      nextStep();
+    });
   };
 
   render() {
@@ -136,7 +131,7 @@ class Checkout extends Component {
       <>
         <Header isCentered />
 
-        <Stepper steps={steps}>
+        <Stepper steps={steps} initialStep="payment">
           {(prevStep, nextStep, CurrentStep, steps) => (
             <>
               <Numbering
