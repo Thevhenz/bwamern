@@ -32,14 +32,14 @@ function DetailsPage() {
         document.title = `Staycation | ${response.title}`;
       }
     },
-    [dispatch]
+    [dispatch, page]
   );
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
     fnLoadPage(id);
-  }, [id]);
+  }, [id, fnLoadPage]);
 
   if (!page[id]) return null;
 
