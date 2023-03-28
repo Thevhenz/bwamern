@@ -20,7 +20,7 @@ function DetailsPage() {
   const { id } = useParams();
 
   const breadcrumb = [
-    { pageTitle: "Home", pageHref: "" },
+    { pageTitle: "Home", pageHref: "/" },
     { pageTitle: "House Details", pageHref: "" },
   ];
 
@@ -50,12 +50,12 @@ function DetailsPage() {
       <FeaturedImage />
       <section className="container">
         <div className="row">
-          <div className="col-7 pr-5">
+          <div className="col-12 col-lg-7 pr-5">
             <Fade bottom>
               <PageDetailDescription data={page[id]} />
             </Fade>
           </div>
-          <div className="col-5">
+          <div className="col-12 col-lg-5">
             <Fade bottom>
               <BookingForm />
             </Fade>

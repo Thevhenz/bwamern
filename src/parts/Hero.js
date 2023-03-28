@@ -19,7 +19,10 @@ export default function Hero(props) {
     <Fade bottom>
       <section className="container pt-4">
         <div className="row align-items-center">
-          <div className="col-auto pr-5" style={{ width: 530 }}>
+          <div
+            className="col-12 col-lg-auto pr-lg-5 mb-5 mb-lg-0"
+            style={{ width: 530 }}
+          >
             <h1 className="font-weight-bold line-height-1 mb-3">
               Forget Busy Work,
               <br />
@@ -42,7 +45,7 @@ export default function Hero(props) {
             </Button>
 
             <div className="row" style={{ marginTop: 80 }}>
-              <div className="col-auto" style={{ marginRight: 35 }}>
+              <div className="col-auto mr-lg-5">
                 <img
                   width="36"
                   height="36"
@@ -56,7 +59,7 @@ export default function Hero(props) {
                   </span>
                 </h6>
               </div>
-              <div className="col-auto" style={{ marginRight: 35 }}>
+              <div className="col-auto  mr-lg-5">
                 <img
                   width="36"
                   height="36"
@@ -86,19 +89,18 @@ export default function Hero(props) {
               </div>
             </div>
           </div>
-          <div className="col-6 pl-5">
-            <div style={{ width: 520, height: 410 }}>
+          <div className="col-12 col-lg-6 pl-lg-5">
+            <div className="hero-image-placeholder">
               <img
                 src={ImageHero}
                 alt="Room with couches"
-                className="img-fluid position-absolute"
-                style={{ margin: "-30px 0 0 -30px", zIndex: 1 }}
+                className="img-fluid position-relative"
+                style={{ zIndex: 2 }}
               />
               <img
                 src={ImageHero_}
                 alt="Room with couches frame"
-                className="img-fluid position-absolute"
-                style={{ margin: "0 -15px -15px 0" }}
+                className="img-fluid"
               />
             </div>
           </div>
